@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luciana Moretto | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <a href="#hero" class="logo">&lt;L/&gt;</a>
+
+    <nav class="nav-links">
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#engineering" data-i18n="nav.engineering">Engineering</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="language-switch">
+      <button id="lang-es">ES</button>
+      <button id="lang-en">EN</button>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="section hero" id="hero">
+      <h1 data-i18n="hero.title">
+        Luciana Moretto
+      </h1>
+
+      <p class="accent" data-i18n="hero.subtitle">
+        Building scalable digital systems.
+      </p>
+
+      <p class="sub" data-i18n="hero.description">
+        Software Engineering Student · Java · Full-Stack in Progress · Architecture Driven
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn primary" data-i18n="buttons.projects">
+          View Projects
+        </a>
+
+        <a href="#contact" class="btn ghost" data-i18n="buttons.contact">
+          Let’s Talk →
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <h2 data-i18n="projects.title">Selected Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p data-i18n="projects.p1">
+            Short description of the project explaining the problem solved and technologies used.
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p data-i18n="projects.p2">
+            Another strong project showcasing architecture, backend integration or UI design.
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Project Three</h3>
+          <p data-i18n="projects.p3">
+            A third project that highlights problem solving and clean implementation.
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <h2 data-i18n="about.title">About Me</h2>
+
+      <p data-i18n="about.description">
+        I am a Software Engineering student focused on building clean, scalable systems.
+        My approach combines strong backend architecture with modern frontend experiences.
+      </p>
+
+      <div class="skills">
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+      </div>
+    </section>
+
+
+    <!-- ================= ENGINEERING MIND ================= -->
+    <section class="section" id="engineering">
+      <h2 data-i18n="engineering.title">How I Think Software</h2>
+
+      <div class="engineering-content">
+        <div class="diagram-placeholder">
+          <!-- Acá luego podemos poner un diagrama animado -->
+          <p>Backend → API → Frontend</p>
+        </div>
+
+       <ul class="principles">
+        <li data-i18n="engineering.principles.clean">Clean Architecture</li>
+        <li data-i18n="engineering.principles.solid">SOLID Principles</li>
+        <li data-i18n="engineering.principles.modular">Modular Design</li>
+        <li data-i18n="engineering.principles.scalability">Scalability Focus</li>
+       </ul>
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <h2 data-i18n="contact.title">Let’s Connect</h2>
+
+      <p data-i18n="contact.description">
+        Interested in collaborating or working together? Feel free to reach out.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:lulimoretto05@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>
+      © 2026 Luciana Moretto.
+    </p>
+  </footer>
+
+</body>
+</html>
