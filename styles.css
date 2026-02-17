@@ -655,3 +655,8 @@ a { text-decoration: none; color: inherit; }
   opacity: 1;
   transform: translateX(0);
 }
+.language-switch button.active{
+  color: var(--text-primary);
+  border-color: rgba(255,255,255,0.20);
+  background: rgba(255,255,255,0.10);
+}
