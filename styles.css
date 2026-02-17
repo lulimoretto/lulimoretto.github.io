@@ -26,8 +26,8 @@ a { text-decoration: none; color: inherit; }
   --text-primary: #E6E8F2;
   --text-secondary: #9CA3AF;
 
-  --accent: #8B5CF6;
-  --accent-2: #22D3EE;
+  --accent: #7d51e2;
+  --accent-2: #5a2992;
 
   --border: rgba(255,255,255,0.10);
   --radius: 20px;
@@ -74,6 +74,13 @@ a { text-decoration: none; color: inherit; }
   border-radius: 12px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.logo:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
 }
 
 .nav-links{
@@ -84,11 +91,72 @@ a { text-decoration: none; color: inherit; }
 .nav-links a{
   font-weight: 600;
   color: var(--text-secondary);
-  transition: 0.25s;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.nav-links a:hover{ color: var(--text-primary); }
+.nav-links a:hover{
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
 
+.nav-actions{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* botón más chico para navbar */
+.btn.small{
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+/* ===== CV Button (smooth + professional) ===== */
+.cv-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  line-height: 1;
+
+  box-shadow: 0 0 20px rgba(139,92,246,0.22);
+  transform: translateY(0);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    filter 0.22s ease;
+}
+
+.cv-btn .cv-ico{
+  opacity: 0.95;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.cv-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(139,92,246,0.32);
+  filter: brightness(1.02);
+}
+
+.cv-btn:hover .cv-ico{
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.cv-btn:active{
+  transform: translateY(0px);
+}
+
+/* focus visible (accesible) */
+.cv-btn:focus-visible{
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(34,211,238,0.20),
+    0 0 30px rgba(139,92,246,0.22);
+}
+
+/* ===== Language switch ===== */
 .language-switch{
   display: flex;
   gap: 10px;
@@ -101,10 +169,56 @@ a { text-decoration: none; color: inherit; }
   padding: 8px 12px;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.25s;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
-.language-switch button:hover{ color: var(--text-primary); }
+.language-switch button:hover{
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.16);
+  transform: translateY(-1px);
+}
+
+.language-switch button.active{
+  color: var(--text-primary);
+  border-color: rgba(255,255,255,0.20);
+  background: rgba(255,255,255,0.10);
+}
+.cv-label-short{
+  display: none;
+}
+
+/* Responsive navbar */
+@media (max-width: 700px){
+  .nav-links{ display: none; }
+  .cv-btn{ padding: 8px 12px; }
+  .cv-btn .cv-ico{ width: 16px; height: 16px; }
+}
+
+@media (max-width: 520px){
+
+  .cv-btn{
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .cv-label-full{
+    display: none; 
+  }
+
+  .cv-label-short{
+    display: inline; 
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  .cv-btn .cv-ico{
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
 
 /* =========================
    HERO (FULL-BLEED)
@@ -120,7 +234,6 @@ a { text-decoration: none; color: inherit; }
 
   padding-top: var(--nav-h); /* keep content below fixed navbar */
 
-  background-image: url("hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -565,6 +678,13 @@ a { text-decoration: none; color: inherit; }
   .project-card{ padding: 18px; }
   .diagram-placeholder{ padding: 24px; }
 }
+@media (max-width: 700px){
+  .cv-btn{
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
 /* =========================
    SCROLL REVEAL (Animations)
 ========================= */
@@ -655,8 +775,4 @@ a { text-decoration: none; color: inherit; }
   opacity: 1;
   transform: translateX(0);
 }
-.language-switch button.active{
-  color: var(--text-primary);
-  border-color: rgba(255,255,255,0.20);
-  background: rgba(255,255,255,0.10);
-}
+

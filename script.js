@@ -1,14 +1,16 @@
 // =========================
 // Scroll Reveal (IntersectionObserver)
 // =========================
-const revealElements = document.querySelectorAll(".reveal, .reveal-stagger");
+const revealElements = document.querySelectorAll(
+  ".reveal, .reveal-stagger, .reveal-left, .reveal-right"
+);
 
 const observer = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
-        obs.unobserve(entry.target); // se anima 1 vez
+        obs.unobserve(entry.target); // anima 1 vez
       }
     });
   },
@@ -20,6 +22,8 @@ const observer = new IntersectionObserver(
 );
 
 revealElements.forEach((el) => observer.observe(el));
+
+
 // =========================
 // i18n (ES/EN)
 // =========================
@@ -36,6 +40,7 @@ const translations = {
 
     "buttons.projects": "View Projects",
     "buttons.contact": "Let’s Talk →",
+    "buttons.cv": "Download CV",
 
     "projects.title": "Selected Projects",
     "projects.p1": "Short description of the project explaining the problem solved and technologies used.",
@@ -47,7 +52,7 @@ const translations = {
     "about.description2": "My approach combines strong backend architecture with modern frontend experiences.",
     "about.description3": "I am passionate about learning new technologies and applying best practices in software development.",
     "about.description4": "I currently excel in these technologies:",
-    
+
     "engineering.title": "How I Think Software",
     "engineering.principles.clean": "Clean Architecture",
     "engineering.principles.solid": "SOLID Principles",
@@ -70,6 +75,7 @@ const translations = {
 
     "buttons.projects": "Ver proyectos",
     "buttons.contact": "Hablemos →",
+    "buttons.cv": "Descargar CV",
 
     "projects.title": "Proyectos destacados",
     "projects.p1": "Descripción breve del proyecto: problema resuelto y tecnologías usadas.",
@@ -77,9 +83,9 @@ const translations = {
     "projects.p3": "Un tercer proyecto que destaca resolución de problemas e implementación limpia.",
 
     "about.title": "Sobre mí",
-    "about.description1": "Soy una estudiante de Ingeniería de Software enfocada en construir sistemas limpios y escalables",
-    "about.description2": "Mi enfoque combina una sólida arquitectura de backend con experiencias frontend modernas.",
-    "about.description3": "Me apasiona aprender nuevas tecnologías y aplicar las mejores prácticas en el desarrollo de software.",
+    "about.description1": "Soy estudiante de Ingeniería de Software enfocada en construir sistemas limpios y escalables.",
+    "about.description2": "Mi enfoque combina una sólida arquitectura backend con experiencias modernas de frontend.",
+    "about.description3": "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas en el desarrollo de software.",
     "about.description4": "Actualmente me destaco en estas tecnologías:",
 
     "engineering.title": "Cómo pienso el software",
@@ -93,6 +99,24 @@ const translations = {
   }
 };
 
+// CV files per language (adjust filenames if you want)
+const cvByLang = {
+  en: "cv/Luciana_Moretto_CV_EN.pdf",
+  es: "cv/Luciana_Moretto_CV_ES.pdf"
+};
+
+function setCvLink(lang){
+  const cvLink = document.getElementById("cv-link");
+  if (!cvLink) return;
+
+  const href = cvByLang[lang] || cvByLang.en;
+  cvLink.setAttribute("href", href);
+
+  // Accessible label updates too
+  const label = lang === "es" ? "Descargar CV" : "Download CV";
+  cvLink.setAttribute("aria-label", label);
+}
+
 function setLanguage(lang) {
   const dict = translations[lang];
   if (!dict) return;
@@ -103,21 +127,22 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = dict[key];
+    if (value === undefined) return;
 
-    if (value === undefined) return; // si falta la key, no rompe
-
-    // Si el elemento es input/textarea usa placeholder (opcional)
-    if (el.placeholder !== undefined && (el.tagName === "INPUT" || el.tagName === "TEXTAREA")) {
+    if ((el.tagName === "INPUT" || el.tagName === "TEXTAREA") && "placeholder" in el) {
       el.placeholder = value;
     } else {
       el.textContent = value;
     }
   });
 
+  // Actualiza CV (texto ya se actualiza por data-i18n, acá solo el link)
+  setCvLink(lang);
+
   // Guardar preferencia
   localStorage.setItem("lang", lang);
 
-  // UI botones activos (opcional)
+  // UI botones activos
   const btnES = document.getElementById("lang-es");
   const btnEN = document.getElementById("lang-en");
   if (btnES && btnEN) {
