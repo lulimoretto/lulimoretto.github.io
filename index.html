@@ -4,27 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luciana Moretto | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
-    <a href="#hero" class="logo">&lt;L/&gt;</a>
+    <div class="container nav-inner">
+      <a href="#hero" class="logo" aria-label="Go to top">&lt;/&gt;</a>
 
-    <nav class="nav-links">
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#engineering" data-i18n="nav.engineering">Engineering</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#engineering" data-i18n="nav.engineering">Engineering</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
 
-    <div class="language-switch">
-      <button id="lang-es">ES</button>
-      <button id="lang-en">EN</button>
+      <div class="language-switch" aria-label="Language switch">
+        <button id="lang-es" type="button">ES</button>
+        <button id="lang-en" type="button">EN</button>
+      </div>
     </div>
   </header>
 
@@ -32,155 +37,155 @@
   <main>
 
     <!-- ================= HERO ================= -->
-    <section class="section hero" id="hero">
-      <div class="hero-overlay"></div>
+    <section class="hero" id="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-tech" aria-hidden="true"></div>
 
-      <div class="hero-content">
-        <h1 data-i18n="hero.title">
-          Luciana Moretto
-        </h1>
+      <!-- ✅ SOLO el contenido tiene padding/margen -->
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 data-i18n="hero.title">Luciana Moretto</h1>
 
-        <p class="accent" data-i18n="hero.subtitle">
-          Building scalable digital systems.
-        </p>
+          <p class="accent" data-i18n="hero.subtitle">
+            Building scalable digital systems.
+          </p>
 
-        <p class="sub" data-i18n="hero.description">
-          Software Engineering Student · Java · Full-Stack in Progress · Architecture Driven
-        </p>
+          <p class="sub" data-i18n="hero.description">
+            Software Engineering Student · Java · Full-Stack in Progress · Architecture Driven
+          </p>
 
-        <div class="buttons">
-          <a href="#projects" class="btn primary" data-i18n="buttons.projects">
-            View Projects
-          </a>
-
-          <a href="#contact" class="btn ghost" data-i18n="buttons.contact">
-            Let’s Talk →
-          </a>
+          <div class="buttons">
+            <a href="#projects" class="btn primary" data-i18n="buttons.projects">View Projects</a>
+            <a href="#contact" class="btn ghost" data-i18n="buttons.contact">Let’s Talk →</a>
+          </div>
         </div>
       </div>
     </section>
 
+
     <!-- ================= PROJECTS ================= -->
     <section class="section" id="projects">
-      <h2 data-i18n="projects.title">Selected Projects</h2>
+      <div class="container">
+        <h2 data-i18n="projects.title">Selected Projects</h2>
 
-      <div class="projects-grid">
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p data-i18n="projects.p1">
+              Short description of the project explaining the problem solved and technologies used.
+            </p>
+            <div class="project-links">
+              <a href="#" class="chip-link">GitHub</a>
+              <a href="#" class="chip-link">Live Demo</a>
+            </div>
+          </article>
 
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p data-i18n="projects.p1">
-            Short description of the project explaining the problem solved and technologies used.
-          </p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-          </div>
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p data-i18n="projects.p2">
+              Another strong project showcasing architecture, backend integration or UI design.
+            </p>
+            <div class="project-links">
+              <a href="#" class="chip-link">GitHub</a>
+              <a href="#" class="chip-link">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Project Three</h3>
+            <p data-i18n="projects.p3">
+              A third project that highlights problem solving and clean implementation.
+            </p>
+            <div class="project-links">
+              <a href="#" class="chip-link">GitHub</a>
+              <a href="#" class="chip-link">Live Demo</a>
+            </div>
+          </article>
         </div>
-
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p data-i18n="projects.p2">
-            Another strong project showcasing architecture, backend integration or UI design.
-          </p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h3>Project Three</h3>
-          <p data-i18n="projects.p3">
-            A third project that highlights problem solving and clean implementation.
-          </p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
 
     <!-- ================= ABOUT ================= -->
     <section class="section" id="about">
-      <h2 data-i18n="about.title">About Me</h2>
+      <div class="container">
+        <h2 data-i18n="about.title">About Me</h2>
 
-      <p data-i18n="about.description">
-        I am a Software Engineering student focused on building clean, scalable systems.
-        My approach combines strong backend architecture with modern frontend experiences.
-      </p>
+        <p class="lead" data-i18n="about.description">
+          I am a Software Engineering student focused on building clean, scalable systems.
+          My approach combines strong backend architecture with modern frontend experiences.
+        </p>
 
-      <div class="skills-grid">
+        <div class="skills-grid">
+          <div class="skill-card html">
+            <img src="imagenes/html-icon.svg" alt="HTML">
+            <span>HTML</span>
+          </div>
 
-        <div class="skill-card html">
-          <img src="imagenes/html-icon.svg" alt="HTML">
-          <span>HTML</span>
+          <div class="skill-card css">
+            <img src="imagenes/css-icon.svg" alt="CSS">
+            <span>CSS</span>
+          </div>
+
+          <div class="skill-card js">
+            <img src="imagenes/javascript-icon.svg" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+
+          <div class="skill-card react">
+            <img src="imagenes/react-icon.svg" alt="React">
+            <span>React</span>
+          </div>
+
+          <div class="skill-card java">
+            <img src="imagenes/java-icon.svg" alt="Java">
+            <span>Java</span>
+          </div>
+
+          <div class="skill-card git">
+            <img src="imagenes/git-icon.svg" alt="Git">
+            <span>Git</span>
+          </div>
         </div>
-
-        <div class="skill-card css">
-          <img src="imagenes/css-icon.svg" alt="CSS">
-          <span>CSS</span>
-        </div>
-
-        <div class="skill-card js">
-          <img src="imagenes/javascript-icon.svg" alt="JavaScript">
-          <span>JavaScript</span>
-        </div>
-
-        <div class="skill-card react">
-          <img src="imagenes/react-icon.svg" alt="React">
-          <span>React</span>
-        </div>
-
-        <div class="skill-card java">
-          <img src="imagenes/java-icon.svg" alt="Java">
-          <span>Java</span>
-        </div>
-
-        <div class="skill-card git">
-          <img src="imagenes/git-icon.svg" alt="Git">
-          <span>Git</span>
-        </div>
-
       </div>
     </section>
 
 
-    <!-- ================= ENGINEERING MIND ================= -->
+    <!-- ================= ENGINEERING ================= -->
     <section class="section" id="engineering">
-      <h2 data-i18n="engineering.title">How I Think Software</h2>
+      <div class="container">
+        <h2 data-i18n="engineering.title">How I Think Software</h2>
 
-      <div class="engineering-content">
-        <div class="diagram-placeholder">
-          <!-- Acá luego podemos poner un diagrama animado -->
-          <p>Backend → API → Frontend</p>
+        <div class="engineering-content">
+          <div class="diagram-placeholder">
+            <p>Backend → API → Frontend</p>
+          </div>
+
+          <ul class="principles">
+            <li data-i18n="engineering.principles.clean">Clean Architecture</li>
+            <li data-i18n="engineering.principles.solid">SOLID Principles</li>
+            <li data-i18n="engineering.principles.modular">Modular Design</li>
+            <li data-i18n="engineering.principles.scalability">Scalability Focus</li>
+          </ul>
         </div>
-
-       <ul class="principles">
-        <li data-i18n="engineering.principles.clean">Clean Architecture</li>
-        <li data-i18n="engineering.principles.solid">SOLID Principles</li>
-        <li data-i18n="engineering.principles.modular">Modular Design</li>
-        <li data-i18n="engineering.principles.scalability">Scalability Focus</li>
-       </ul>
       </div>
     </section>
 
 
     <!-- ================= CONTACT ================= -->
     <section class="section" id="contact">
-      <h2 data-i18n="contact.title">Let’s Connect</h2>
+      <div class="container">
+        <h2 data-i18n="contact.title">Let’s Connect</h2>
 
-      <p data-i18n="contact.description">
-        Interested in collaborating or working together? Feel free to reach out.
-      </p>
+        <p class="lead" data-i18n="contact.description">
+          Interested in collaborating or working together? Feel free to reach out.
+        </p>
 
-      <div class="contact-links">
-        <a href="https://mail.google.com/mail/?view=cm&to=lulimoretto05@gmail.com" target="_blank" rel="noopener">Email</a> 
-        <a href="https://www.linkedin.com/in/luciana-moretto-470029338/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/lulimoretto" target="_blank" rel="noopener">GitHub</a>
+        <div class="contact-links">
+          <a class="chip-link" href="https://mail.google.com/mail/?view=cm&to=lulimoretto05@gmail.com" target="_blank" rel="noopener">Email</a>
+          <a class="chip-link" href="https://www.linkedin.com/in/luciana-moretto-470029338/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="chip-link" href="https://github.com/lulimoretto" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </section>
 
@@ -189,9 +194,9 @@
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <p>
-      © 2026 Luciana Moretto.
-    </p>
+    <div class="container">
+      <p>© 2026 Luciana Moretto.</p>
+    </div>
   </footer>
 
 </body>
