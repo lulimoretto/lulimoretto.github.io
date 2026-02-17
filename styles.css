@@ -565,3 +565,93 @@ a { text-decoration: none; color: inherit; }
   .project-card{ padding: 18px; }
   .diagram-placeholder{ padding: 24px; }
 }
+/* =========================
+   SCROLL REVEAL (Animations)
+========================= */
+
+/* Estado inicial (oculto) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(6px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease,
+    filter 700ms ease;
+  will-change: opacity, transform, filter;
+}
+
+/* Cuando aparece */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Variantes opcionales */
+.reveal.from-left { transform: translateX(-26px); }
+.reveal.from-right { transform: translateX(26px); }
+.reveal.zoom { transform: scale(0.98); }
+
+/* Stagger: delay automático para hijos */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition:
+    opacity 650ms ease,
+    transform 650ms ease,
+    filter 650ms ease;
+}
+
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Delay escalonado */
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 80ms; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 160ms; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 240ms; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 320ms; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 400ms; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 480ms; }
+.reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 560ms; }
+.reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 640ms; }
+
+/* Accesibilidad: si el usuario prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
+/* =========================
+   Directional Reveal Variants
+========================= */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: 
+    opacity 800ms cubic-bezier(.22,1,.36,1),
+    transform 800ms cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: 
+    opacity 800ms cubic-bezier(.22,1,.36,1),
+    transform 800ms cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}

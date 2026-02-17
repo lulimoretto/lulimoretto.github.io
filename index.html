@@ -41,7 +41,7 @@
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-tech" aria-hidden="true"></div>
 
-      <!-- ✅ SOLO el contenido tiene padding/margen -->
+      <!-- Hero: aparece al cargar (no scroll) -->
       <div class="container hero-container">
         <div class="hero-content">
           <h1 data-i18n="hero.title">Luciana Moretto</h1>
@@ -66,37 +66,38 @@
     <!-- ================= PROJECTS ================= -->
     <section class="section" id="projects">
       <div class="container">
-        <h2 data-i18n="projects.title">Selected Projects</h2>
+        <h2 class="reveal" data-i18n="projects.title">Selected Projects</h2>
 
-        <div class="projects-grid">
+        <!-- cards: aparecen una por una -->
+        <div class="projects-grid reveal-stagger">
           <article class="project-card">
-            <h3>Project One</h3>
+            <h3 class="reveal">Project One</h3>
             <p data-i18n="projects.p1">
               Short description of the project explaining the problem solved and technologies used.
             </p>
-            <div class="project-links">
+            <div class="project-links reveal-stagger">
               <a href="#" class="chip-link">GitHub</a>
               <a href="#" class="chip-link">Live Demo</a>
             </div>
           </article>
 
           <article class="project-card">
-            <h3>Project Two</h3>
+            <h3 class="reveal">Project Two</h3>
             <p data-i18n="projects.p2">
               Another strong project showcasing architecture, backend integration or UI design.
             </p>
-            <div class="project-links">
+            <div class="project-links reveal-stagger">
               <a href="#" class="chip-link">GitHub</a>
               <a href="#" class="chip-link">Live Demo</a>
             </div>
           </article>
 
           <article class="project-card">
-            <h3>Project Three</h3>
+            <h3 class="reveal">Project Three</h3>
             <p data-i18n="projects.p3">
               A third project that highlights problem solving and clean implementation.
             </p>
-            <div class="project-links">
+            <div class="project-links reveal-stagger">
               <a href="#" class="chip-link">GitHub</a>
               <a href="#" class="chip-link">Live Demo</a>
             </div>
@@ -109,14 +110,15 @@
     <!-- ================= ABOUT ================= -->
     <section class="section" id="about">
       <div class="container">
-        <h2 data-i18n="about.title">About Me</h2>
+        <h2 class="reveal" data-i18n="about.title">About Me</h2>
 
-        <p class="lead" data-i18n="about.description">
+        <p class="lead reveal" data-i18n="about.description">
           I am a Software Engineering student focused on building clean, scalable systems.
           My approach combines strong backend architecture with modern frontend experiences.
         </p>
 
-        <div class="skills-grid">
+        <!-- skills: stagger -->
+        <div class="skills-grid reveal-stagger">
           <div class="skill-card html">
             <img src="imagenes/html-icon.svg" alt="HTML">
             <span>HTML</span>
@@ -154,11 +156,12 @@
     <!-- ================= ENGINEERING ================= -->
     <section class="section" id="engineering">
       <div class="container">
-        <h2 data-i18n="engineering.title">How I Think Software</h2>
+        <h2 class="reveal" data-i18n="engineering.title">How I Think Software</h2>
 
         <div class="engineering-content">
-          <div class="diagram">
-            <div class="diagram-top">
+          <!-- left card: aparece como bloque -->
+          <div class="diagram reveal reveal-left">
+            <div class="diagram-top reveal-stagger">
               <div class="node backend">
                 <span class="node-title">Backend</span>
                 <span class="node-sub">Domain · Services</span>
@@ -179,7 +182,7 @@
               </div>
             </div>
 
-            <div class="diagram-bottom">
+            <div class="diagram-bottom reveal-stagger">
               <span class="pill">SQL</span>
               <span class="pill">Testing</span>
               <span class="pill">Observability</span>
@@ -187,8 +190,8 @@
             </div>
           </div>
 
-
-          <ul class="principles">
+          <!-- right list: stagger -->
+          <ul class="principles reveal reveal-right reveal-stagger">
             <li data-i18n="engineering.principles.clean">Clean Architecture</li>
             <li data-i18n="engineering.principles.solid">SOLID Principles</li>
             <li data-i18n="engineering.principles.modular">Modular Design</li>
@@ -202,13 +205,13 @@
     <!-- ================= CONTACT ================= -->
     <section class="section" id="contact">
       <div class="container">
-        <h2 data-i18n="contact.title">Let’s Connect</h2>
+        <h2 class="reveal" data-i18n="contact.title">Let’s Connect</h2>
 
-        <p class="lead" data-i18n="contact.description">
+        <p class="lead reveal" data-i18n="contact.description">
           Interested in collaborating or working together? Feel free to reach out.
         </p>
 
-        <div class="contact-links">
+        <div class="contact-links reveal-stagger">
           <a class="chip-link" href="https://mail.google.com/mail/?view=cm&to=lulimoretto05@gmail.com" target="_blank" rel="noopener">Email</a>
           <a class="chip-link" href="https://www.linkedin.com/in/luciana-moretto-470029338/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="chip-link" href="https://github.com/lulimoretto" target="_blank" rel="noopener">GitHub</a>
@@ -222,9 +225,10 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Luciana Moretto.</p>
+      <p class="reveal">© 2026 Luciana Moretto.</p>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
