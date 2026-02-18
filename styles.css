@@ -337,6 +337,35 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-secondary);
   max-width: 60ch;
 }
+@media (max-width: 580px){
+  .hero{
+    min-height: 100svh;                 /* iOS safe */         
+    padding-top: calc(var(--nav-h) + 22px);
+  }
+
+  .hero-container{
+    padding-left: 20px;                
+    padding-right: 20px;
+  }
+
+  .hero-content{
+    margin-left: 0;                    
+    max-width: 34ch;                    
+  }
+
+  .hero .sub{
+    font-size: 15px;
+    max-width: 36ch;
+  }
+
+ .hero-tech{
+    left: 0;
+    opacity: 0.16;
+    animation: none;
+    background-position: right center;
+    background-size: 160% auto;
+  }
+}
 
 /* =========================
    BUTTONS
@@ -638,6 +667,7 @@ a { text-decoration: none; color: inherit; }
     display: none;
   }
 }
+
 /* =========================
    EDUCATION TIMELINE
 ========================= */
@@ -726,10 +756,6 @@ a { text-decoration: none; color: inherit; }
     padding: 16px;
   }
 }
-
-
-
-
 /* =========================
    CONTACT
 ========================= */
@@ -865,4 +891,7 @@ a { text-decoration: none; color: inherit; }
   opacity: 1;
   transform: translateX(0);
 }
+
+
+
 

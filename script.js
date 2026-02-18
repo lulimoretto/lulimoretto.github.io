@@ -61,7 +61,7 @@ const translations = {
 
     "education.item2.degree": "Full-Stack Web Development",
     "education.item2.place": "Independent Study",
-    "education.item2.desc": "React, REST APIs, Git workflows, deployment with GitHub Pages & Vercel.",
+    "education.item2.desc": "React, REST APIs, Git workflows, deployment with GitHub Pages and Vercel.",
 
     "education.item3.degree": "Advanced Java & OOP",
     "education.item3.place": "Academic + Personal Projects",
