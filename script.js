@@ -53,6 +53,21 @@ const translations = {
     "about.description3": "I am passionate about learning new technologies and applying best practices in software development.",
     "about.description4": "I currently excel in these technologies:",
 
+    "education.title": "Education",
+    "education.item1.date": "2023 – Present",
+    "education.item1.degree": "Software Engineering",
+    "education.item1.place": "Universidad Nacional del Sur, Argentina",
+    "education.item1.desc": "Focused on data structures, software architecture, computer organization and systems design.",
+
+    "education.item2.degree": "Full-Stack Web Development",
+    "education.item2.place": "Independent Study",
+    "education.item2.desc": "React, REST APIs, Git workflows, deployment with GitHub Pages & Vercel.",
+
+    "education.item3.degree": "Advanced Java & OOP",
+    "education.item3.place": "Academic + Personal Projects",
+    "education.item3.desc": "SOLID principles, design patterns, modular architecture.",
+
+
     "engineering.title": "How I Think Software",
     "engineering.principles.clean": "Clean Architecture",
     "engineering.principles.solid": "SOLID Principles",
@@ -83,10 +98,25 @@ const translations = {
     "projects.p3": "Un tercer proyecto que destaca resolución de problemas e implementación limpia.",
 
     "about.title": "Sobre mí",
-    "about.description1": "Soy estudiante de Ingeniería de Software enfocada en construir sistemas limpios y escalables.",
+    "about.description1": "Soy estudiante de Ingeniería de Software de 3er grado, enfocada en construir sistemas limpios y escalables.",
     "about.description2": "Mi enfoque combina una sólida arquitectura backend con experiencias modernas de frontend.",
     "about.description3": "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas en el desarrollo de software.",
     "about.description4": "Actualmente me destaco en estas tecnologías:",
+
+    "education.title": "Educación",
+    "education.item1.date": "2023 – Actualidad",
+    "education.item1.degree": "Ingeniería en Sistemas de Información",
+    "education.item1.place": "Universidad Nacional del Sur, Argentina",
+    "education.item1.desc": "Enfoque en estructuras de datos, arquitectura de software, organización de computadoras y diseño de sistemas.",
+
+    "education.item2.degree": "Desarrollo Web Full-Stack",
+    "education.item2.place": "Estudio independiente",
+    "education.item2.desc": "React, APIs REST, flujos de trabajo con Git y despliegue con GitHub Pages y Vercel.",
+
+    "education.item3.degree": "Java avanzado y POO",
+    "education.item3.place": "Proyectos académicos y personales",
+    "education.item3.desc": "Principios SOLID, patrones de diseño y arquitectura modular.",
+
 
     "engineering.title": "Cómo pienso el software",
     "engineering.principles.clean": "Arquitectura limpia",

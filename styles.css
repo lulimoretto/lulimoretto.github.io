@@ -638,6 +638,96 @@ a { text-decoration: none; color: inherit; }
     display: none;
   }
 }
+/* =========================
+   EDUCATION TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(139,92,246,0.6),
+    rgba(34,211,238,0.4)
+  );
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B5CF6, #22D3EE);
+  box-shadow: 0 0 15px rgba(139,92,246,0.4);
+}
+
+.timeline-content {
+  background: rgba(15,20,40,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139,92,246,0.3);
+  box-shadow: 0 0 25px rgba(139,92,246,0.15);
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-place {
+  font-weight: 600;
+  color: #8B5CF6;
+  margin-bottom: 8px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 580px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-content {
+    padding: 16px;
+  }
+}
+
+
 
 
 /* =========================
