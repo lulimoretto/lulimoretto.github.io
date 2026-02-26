@@ -27,6 +27,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
@@ -59,15 +60,15 @@
         </a>
 
         <div class="language-switch" aria-label="Language switch">
-          <button id="lang-es" type="button">ES</button>
-          <button id="lang-en" type="button">EN</button>
+          <button id="lang-es" type="button" aria-pressed="false">ES</button>
+          <button id="lang-en" type="button" aria-pressed="false">EN</button>
         </div>
       </div>
     </div>
   </header>
 
 
-  <main>
+  <main id="main">
 
     <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
@@ -165,32 +166,32 @@
         <!-- skills: stagger -->
         <div class="skills-grid reveal-stagger">
           <div class="skill-card html">
-            <img src="imagenes/html-icon.svg" alt="HTML">
+            <img src="imagenes/html-icon.svg" alt="" aria-hidden="true">
             <span>HTML</span>
           </div>
 
           <div class="skill-card css">
-            <img src="imagenes/css-icon.svg" alt="CSS">
+            <img src="imagenes/css-icon.svg" alt="" aria-hidden="true">
             <span>CSS</span>
           </div>
 
           <div class="skill-card js">
-            <img src="imagenes/javascript-icon.svg" alt="JavaScript">
+            <img src="imagenes/javascript-icon.svg" alt="" aria-hidden="true">
             <span>JavaScript</span>
           </div>
 
           <div class="skill-card react">
-            <img src="imagenes/react-icon.svg" alt="React">
+            <img src="imagenes/react-icon.svg" alt="" aria-hidden="true">
             <span>React</span>
           </div>
 
           <div class="skill-card java">
-            <img src="imagenes/java-icon.svg" alt="Java">
+            <img src="imagenes/java-icon.svg" alt="" aria-hidden="true">
             <span>Java</span>
           </div>
 
           <div class="skill-card git">
-            <img src="imagenes/git-icon.svg" alt="Git">
+            <img src="imagenes/git-icon.svg" alt="" aria-hidden="true">
             <span>Git</span>
           </div>
         </div>

@@ -23,7 +23,8 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
 :focus-visible {
-  outline: none;
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
   box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.20);
   border-radius: 12px;
 }
@@ -856,6 +857,19 @@ img { max-width: 100%; display: block; }
     filter: none !important;
     transition: none !important;
   }
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px 16px;
+  z-index: 999;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 

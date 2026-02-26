@@ -178,7 +178,10 @@ function setLanguage(lang) {
   if (btnES && btnEN) {
     btnES.classList.toggle("active", lang === "es");
     btnEN.classList.toggle("active", lang === "en");
+    btnES.setAttribute("aria-pressed", String(lang === "es"));
+    btnEN.setAttribute("aria-pressed", String(lang === "en"));
   }
+  
 }
 
 // Botones
