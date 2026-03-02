@@ -31,6 +31,7 @@ const translations = {
   en: {
     "nav.projects": "Projects",
     "nav.about": "About",
+    "nav.education": "Education",
     "nav.engineering": "Engineering",
     "nav.contact": "Contact",
 
@@ -81,6 +82,7 @@ const translations = {
   es: {
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mí",
+    "nav.education": "Educación",
     "nav.engineering": "Ingeniería",
     "nav.contact": "Contacto",
 
